@@ -39,35 +39,37 @@
           }
         ],
         "epcList": [
-          "urn:epc:id:giai:952005385.w2"
+          "urn:epc:id:giai:952005385.w2" ##(Imagine a train transporting individual assets. 
+          In this instance, asset w2)
         ],
         "action": "ADD",
-        "bizStep": "transporting",
-        "disposition": "in_transit",
-        "readPoint": {
+        "bizStep": "transporting", 
+        "disposition": "in_transit", ##(The train is actively moving so disposition is in_transit)
+        "readPoint": { 
           "id": "urn:epc:id:sgln:952005385.011.ts4711"
         },
         "bizLocation": {
-          "id": "urn:epc:id:sgln:952005385.011.scA"
+          "id": "urn:epc:id:sgln:952005385.011.scA" ##(Here we have a readpoint tracking location)
         },
         "sourceList": [
           {
             "type": "location",
-            "source": "urn:epc:id:sgln:952005385.481.0"
+            "source": "urn:epc:id:sgln:952005385.481.0" ##(The original location serialized)
           }
         ],
         "destinationList": [
           {
             "type": "location",
-            "destination": "urn:epc:id:sgln:952005385.011.0"
+            "destination": "urn:epc:id:sgln:952005385.011.0" ##(Destination info also serialized)
           }
         ],
-        "rail:trainVehicleCount": "3",
+        "rail:trainVehicleCount": "3", ##(Here we start capturing granular rail vehicle metadata)
         "rail:vehicle": [
           {
-            "rail:vehicleUniquelyIdentified": "true",
-            "rail:vehicleAxleCount": "4",
-            "rail:vehiclePosition": "1",
+            "rail:vehicleUniquelyIdentified": "true", ##(Unique identity captured for the below rail vehicle)
+            "rail:vehicleAxleCount": "4", ##(Metadata capturing axle count.)
+            "rail:vehiclePosition": "1", ##(More metadata. The point is that opportunities are 
+            limitless, most supply chain data can be structured into traceable artificats)
             "rail:vehicleMasterGIAI": "urn:epc:id:giai:952005385.vehicle2"
           },
           {

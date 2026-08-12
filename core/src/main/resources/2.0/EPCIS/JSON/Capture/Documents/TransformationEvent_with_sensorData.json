@@ -1,6 +1,6 @@
 {
   "@context": [
-    "https://ref.gs1.org/standards/epcis/epcis-context.jsonld",
+    "https://ref.gs1.org/standards/epcis/epcis-context.jsonld", 
     {
       "example": "https://ns.example.com/epcis/"
     },
@@ -14,20 +14,21 @@
       "example3": "https://ns.example3.com/epcis/"
     },
     {
-      "example4": "https://ns.example4.com/epcis/"
+      "example4": "https://ns.example4.com/epcis/" ##(the story is not simply “temperature was recorded.” It is a manufacturing genealogy record containing environmental evidence 
+      and a warning that some event information was later declared erroneous.)
     }
   ],
   "type": "EPCISDocument",
   "schemaVersion": "2.0",
-  "creationDate": "2022-01-20T10:41:49.296Z",
+  "creationDate": "2026-04-20T10:41:49.296Z",
   "epcisBody": {
     "eventList": [
       {
-        "type": "TransformationEvent",
-        "eventTime": "2020-09-29T12:00:00.000Z",
+        "type": "TransformationEvent",  (A TransformationEvent connects inputs with outputs)
+        "eventTime": "2026-04-29T12:00:00.000Z", (When the transformation occured)
         "eventTimeZoneOffset": "+02:00",
         "errorDeclaration": {
-          "declarationTime": "2020-09-29T13:00:00.000Z",
+          "declarationTime": "2026-04-29T13:00:00.000Z",
           "example:issuer": "Employee 123",
           "example:field": "foo bar",
           "example3:errorCodes": {
@@ -37,44 +38,52 @@
         },
         "inputQuantityList": [
           {
-            "epcClass": "urn:epc:class:lgtin:4023333.055555.ABC123",
-            "quantity": 25,
-            "uom": "KGM"
-          }
+            "epcClass": "urn:epc:class:lgtin:4023333.055555.ABC123", ##(Here we begin with input material)
+            "quantity": 25, 
+            "uom": "KGM" ##(So we have Product class 4023333.055555, Lot ABC123, Quantity 25 kilograms)
+          } ##(Operationally speaking, twenty Five kg of a particular material from lot ABC123 participated
+          in the transformation event)
         ],
-        "outputEPCList": [
-          "urn:epc:id:sgtin:4012345.012345.987",
-          "urn:epc:id:sgtin:4012345.012345.988"
+        "outputEPCList": [ ##(Here we bein with the output material)
+          "urn:epc:id:sgtin:4012345.012345.987", ##( These wwo individually serialized outputs were produced)
+          "urn:epc:id:sgtin:4012345.012345.988"  
         ],
-        "bizStep": "commissioning",
+        "bizStep": "commissioning", ##(This means the output identifiers are being introduced into the
+        traceability system)
+        ##(Operational meaning - Serials 987 and 988 now official exist as traceable objects)
         "readPoint": {
-          "id": "urn:epc:id:sgln:4023333.00000.0"
+          "id": "urn:epc:id:sgln:4023333.00000.0" ##(This line identifies the specific point where the event
+          was captured. For example a station, processing line, etc)
         },
-        "bizLocation": {
+        "bizLocation": { ##(This line identifies the broader business location associated with the event
+          a warehouse, manufacturing plant, etc)
           "id": "urn:epc:id:sgln:4023333.00001.12"
         },
-        "sensorElementList": [
+        "sensorElementList": [ ##(Here we begin to track sensor metadata of the product at hand)
           {
-            "sensorMetadata": {
-              "startTime": "2019-04-01T14:00:00.000Z",
-              "endTime": "2019-04-02T13:59:59.999Z",
+            "sensorMetadata": { 
+              "startTime": "2026-04-01T14:00:00.000Z",
+              "endTime": "2026-04-02T13:59:59.999Z", ##(The sensor report nearly covers 24 hours)
               "example:someFurtherMetaData": "someText"
             },
             "sensorReport": [
               {
                 "type": "Temperature",
-                "minValue": 12.4,
-                "maxValue": 13.8,
-                "meanValue": 13.2,
-                "percRank": 50,
+                "minValue": 12.4, ##(The lowest observed temperature was 12.4 °C.)
+                "maxValue": 13.8, ##(The highest was 13.8 °C.)
+                "meanValue": 13.2, ##(The average was 13.2 °C.)
+                "percRank": 50, ##(For statistic folks this is the 50th percentile.
+                In other words, Half the measurements were at or below approximately 12.7 °C)
                 "percValue": 12.7,
                 "uom": "CEL",
-                "sDev": 0.41,
+                "sDev": 0.41, ##(A standard deviation of 0.41 °C suggests the measurements stayed 
+                relatively close to the average.)
                 "example:cv": "123"
               },
               {
-                "type": "example:someSensorProperty",
-                "stringValue": "someSensorOutput"
+                "type": "example:someSensorProperty", ##(These fields demonstrate that enterprises can extend 
+                EPCIS with additional sensor information)
+                "stringValue": "someSensorOutput"  
               }
             ],
             "example:furtherSensorData": {

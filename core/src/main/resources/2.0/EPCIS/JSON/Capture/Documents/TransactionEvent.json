@@ -54,13 +54,13 @@
         "sourceList": [
           {
             "type": "location",
-            "source": "urn:epc:id:sgln:952005385.481.0" ##(The original location serialized)
+            "source": "urn:epc:id:sgln:952005385.481.0" ##(Original location identified by SGLN)
           }
         ],
         "destinationList": [
           {
             "type": "location",
-            "destination": "urn:epc:id:sgln:952005385.011.0" ##(Destination info also serialized)
+            "destination": "urn:epc:id:sgln:952005385.011.0" ##(Destination info also serialized by SGLN)
           }
         ],
         "rail:trainVehicleCount": "3", ##(Here we start capturing granular rail vehicle metadata)

@@ -36,9 +36,12 @@
         },
         "sensorElementList": [
           {
-            "sensorMetadata": {
+            "sensorMetadata": { ## (This file is a sensor data showcase different ways EPCIS 
+              can attach sensor information to products, 
+              quantities, packaging, transactions, and manufacturing.)
               "time": "2019-04-02T14:05:00+01:00",
-              "deviceID": "urn:epc:id:giai:4000001.111",
+              "deviceID": "urn:epc:id:giai:4000001.111", (## Here we have one product serial 9876 
+            is inspected three times)
               "deviceMetadata": "https://id.gs1.org/8004/4000001111",
               "rawData": "https://example.org/8004/401234599999"
             },
@@ -274,12 +277,14 @@
       },
       {
         "type": "ObjectEvent",
-        "eventTime": "2019-04-02T15:00:00+01:00",
+        "eventTime": "2026-08-02T15:00:00+01:00", ##(The inspection event was
+        recorded at 15:00 local time)
         "eventTimeZoneOffset": "+01:00",
         "epcList": [
-          "urn:epc:id:sgtin:4012345.011111.9876"
+          "urn:epc:id:sgtin:4012345.011111.9876" ##(Okokok so this event 
+          describes one specific serialized product, serial 9876)
         ],
-        "action": "OBSERVE",
+        "action": "OBSERVE", ##(Products condition was observed)
         "bizStep": "inspecting",
         "readPoint": {
           "id": "urn:epc:id:sgln:4012345.00005.0"
@@ -287,43 +292,44 @@
         "sensorElementList": [
           {
             "sensorMetadata": {
-              "deviceID": "urn:epc:id:giai:4000001.111",
+              "deviceID": "urn:epc:id:giai:4000001.111", ##(Sensor device that 
+              generated the readings)
               "deviceMetadata": "https://id.gs1.org/8004/4000001111"
             },
             "sensorReport": [
               {
                 "type": "Temperature",
-                "time": "2019-04-02T14:05:00+01:00",
+                "time": "2026-08-02T14:05:00+01:00",
                 "value": 26,
                 "uom": "CEL"
               },
               {
                 "type": "Temperature",
-                "time": "2019-04-02T14:15:00+01:00",
+                "time": "2026-08-02T14:15:00+01:00",
                 "value": 26.1,
-                "uom": "CEL"
+                "uom": "CEL"  ##(Imagine a list of temerature readings)
               },
               {
                 "type": "Temperature",
-                "time": "2019-04-02T14:25:00+01:00",
+                "time": "2026-08-02T14:25:00+01:00",
                 "value": 26.2,
                 "uom": "CEL"
               },
               {
                 "type": "Temperature",
-                "time": "2019-04-02T14:35:00+01:00",
+                "time": "2026-08-02T14:35:00+01:00",
                 "value": 26.3,
                 "uom": "CEL"
               },
               {
                 "type": "Temperature",
-                "time": "2019-04-02T14:45:00+01:00",
+                "time": "2026-08-02T14:45:00+01:00",
                 "value": 26.4,
                 "uom": "CEL"
               },
               {
                 "type": "Temperature",
-                "time": "2019-04-02T14:55:00+01:00",
+                "time": "2026-08-02T14:55:00+01:00",
                 "value": 26.5,
                 "uom": "CEL"
               }
@@ -425,54 +431,64 @@
           }
         ]
       },
-      {
-        "type": "AggregationEvent",
-        "eventTime": "2019-10-07T15:30:00+01:00",
+      { ##(Imagine a food manufacturer packaging a buld product
+        for shipment. We're connecting a shipping container with the material
+        being packed inside it)
+        "type": "AggregationEvent", ##(A logistics unit is being connected to its contents)
+        "eventTime": "2026-08-07T15:30:00+01:00", ##(Event recorded on August 7, 2026)
         "eventTimeZoneOffset": "+01:00",
-        "parentID": "urn:epc:id:sscc:4012345.0111111111",
-        "childEPCs": [],
+        "parentID": "urn:epc:id:sscc:4012345.0111111111",  ##(Here is our serialized
+        logistics unit, likely a pallet/tote/shipping container)
+        "childEPCs": [], ##(We dont see serialized items because this product is being tracked in bullk)
         "action": "ADD",
-        "bizStep": "packing",
+        "bizStep": "packing", ##(The operator is adding material to the logistics unit during packaging)
         "disposition": "in_progress",
         "readPoint": {
           "id": "urn:epc:id:sgln:4012345.00025.0"
-        },
+        }, ##(This tells us where the packaging event was captured, imagine a specific packaging station)
         "childQuantityList": [
-          {
+          { ##(Now we find out what was packed inside)
             "epcClass": "urn:epc:class:lgtin:4012345.011111.1234",
             "quantity": 52,
             "uom": "KGM"
-          }
+          } ##(The operator packed 52 kgs of material from lot 1234)
         ],
         "sensorElementList": [
-          {
+          { ##(This is where the story gets interesting. This business is also attaching
+            environmental and quality artificats to the packaging event)
             "sensorMetadata": {
               "time": "2019-07-19T14:00:00+01:00",
-              "deviceID": "urn:epc:id:giai:4000001.111",
+              "deviceID": "urn:epc:id:giai:4000001.111", ##(This identifies the sensor responisble for the
+              medimientos)
               "deviceMetadata": "https://id.gs1.org/8004/4000001111",
-              "rawData": "https://example.org/8004/401234599999",
+              "rawData": "https://example.org/8004/401234599999", ##(If auditors need to investigate later,
+              this points back to the underlying data)
               "dataProcessingMethod": "https://example.com/253/4012345000054987",
+              ##(This business is also attaching the data process/governance methods)
               "bizRules": "https://example.org/253/4012345000054987"
             },
             "sensorReport": [
               {
                 "type": "AbsoluteHumidity",
                 "value": 12.1,
-                "uom": "A93"
-              },
+                "uom": "A93"       
+              },##(Humidity was measured while the material was associated with the packing process.)
               {
                 "type": "Molar_concentration",
                 "chemicalSubstance": "https://identifiers.org/inchikey:CZMRCDWAGMRECN-UGDNZRGBSA-N",
                 "value": 0.18,
                 "uom": "C35"
-              },
+              },##(A specific chemical substance was measured.)
               {
                 "type": "Molar_concentration",
                 "microorganism": "https://www.ncbi.nlm.nih.gov/taxonomy/1126011",
                 "value": 0.05,
                 "uom": "C35"
-              }
-            ]
+              } ## (The business also recorded a measurement connected to a specific microorganism)
+            ## (Now we can see the code paint a story that 52 kg from lot 1234 were packed
+            into a serialized logistics unit and connected to the related sensor evidence. 
+            So if a quality issue appears later, the business can trace it back to the exact lot, 
+            container, packing event, and supporting sensor data instead of investigating the entire shipment.
           },
           {
             "sensorMetadata": {
@@ -491,11 +507,14 @@
                 "uom": "CEL",
                 "sDev": 0.41,
                 "example:cv": "123"
-              },
+              }, ##(Instead of listing every temperature reading, EPCIS summarizes the range and average.)
               {
                 "type": "example:someSensorProperty",
                 "stringValue": "someSensorOutput"
-              }
+              } ##( 
+Now we’ve reached the bottom of the event. We can see that 52 kg from lot 1234 were packed into a serialized logistics unit and connected to the related sensor evidence. If a quality issue appears later, the business can trace it back to the exact lot, container, packing event, and supporting sensor data instead of investigating the entire shipment.
+
+              
             ],
             "example:furtherSensorData": {
               "example:measure2": "0.987",

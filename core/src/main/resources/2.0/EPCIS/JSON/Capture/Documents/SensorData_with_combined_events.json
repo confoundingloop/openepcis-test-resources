@@ -540,32 +540,37 @@ Now we’ve reached the bottom of the event. We can see that 52 kg from lot 1234
             ]
           }
         ]
-      },
-      {
-        "type": "ObjectEvent",
-        "eventTime": "2020-05-07T16:00:00+01:00",
+      }, ##Jacobs Notes
+      { 
+        "type": "ObjectEvent", #(Here we are observing the condition of one specific product)
+        "eventTime": "2026-08-17T16:00:00+01:00", #(The sensor reporting event was recorded at 4:00PM local time.
         "eventTimeZoneOffset": "+01:00",
         "epcList": [
-          "urn:epc:id:sgtin:4012345.011111.9876"
+          "urn:epc:id:sgtin:4012345.011111.9876" #(Product Serial 9876 is the object connected to this sensor event)
         ],
-        "action": "OBSERVE",
-        "bizStep": "sensor_reporting",
-        "readPoint": {
-          "id": "urn:epc:id:sgln:4012345.00005.0"
+        "action": "OBSERVE", #(Nothing is being packed or transformed. The system is recording what it detected)
+        "bizStep": "sensor_reporting", #(Osea the purpose of this event is recording what it detected)
+        "readPoint": { 
+          "id": "urn:epc:id:sgln:4012345.00005.0" #(This identifies the location where the sensor event was captured)
         },
-        "sensorElementList": [
+        "sensorElementList": [ #(Here is where the sensor exceptions connected to the product begin)
           {
             "sensorReport": [
               {
-                "exception": "gs1:ERROR_CONDITION",
+                "exception": "gs1:ERROR_CONDITION", #(The system flagged an error condition)
                 "uriValue": "https://example.com/ErrorCode-A827"
-              },
+              }, #(Error code A827 points to additional information about the detected problem)
               {
-                "exception": "gs1:ALARM_CONDITION",
-                "booleanValue": true
-              }
+                "exception": "gs1:ALARM_CONDITION", #(The system also recorded an alarm condition)
+                "booleanValue": true #(Alarm was active when the event was captured) 
+                
+                #(Now we have the full picture. Product 9876 was being monitored at a specific 
+                location when the sensor system recorded error code A827 and an active alarm. 
+                 The event gives the business a traceable exception tied to a specific product, place, and time)            
             ]
-          }
+          }      So what? Well instead of discovering the problem later, the business can query
+                or subscribe to these alarm events and respond with a quality hold, investigation,
+                or quick maintenance action.
         ]
       },
       {
@@ -603,28 +608,39 @@ Now we’ve reached the bottom of the event. We can see that 52 kg from lot 1234
               }
             ]
           }
-        ]
-      },
+        ] ##Jacobs Notes
+      },##(Inspection and Replacement Decision Scenario. 
+        Imagine two serialized products connected to a purchase order undergoing an
+        inspection. A radiation measurement is recorded and the products are marked
+        as needing replacement)
       {
-        "type": "TransactionEvent",
-        "eventTime": "2020-07-03T00:05:00-06:00",
+        "type": "TransactionEvent", ##(This event connects specific products to a business transaction)
+        "eventTime": "2026-08-18T00:05:00-06:00",
+        ##(The receiving inspection occured on August, 18 2026, at 12:05 am)
         "eventTimeZoneOffset": "-06:00",
         "bizTransactionList": [
           {
             "type": "po",
-            "bizTransaction": "urn:epcglobal:cbv:bt:4012345123456:RE100099"
-          }
+            "bizTransaction": "urn:epcglobal:cbv:bt:4012345123456:RE123099"
+          } ##(The event is connected to purchase order RE123099)
         ],
         "epcList": [
           "urn:epc:id:sgtin:0614141.107340.1",
           "urn:epc:id:sgtin:0614141.107340.2"
+          ##(Two individually serialized products are being inspected
+           serial 1 and serial 2)
         ],
         "action": "ADD",
+        ##(The two serialized components are being connectd to this po transaction)
         "bizStep": "inspecting",
+        ##(The products are undergoing an inspection)
         "disposition": "needs_replacement",
+        ##(The inspection failed. Both components are flagged for replacement 
+          and should not proceed operationally)
         "readPoint": {
           "id": "urn:epc:id:sgln:4012345.00000.5"
-        },
+        }, ##(This identifies the exact receiving or radiation inspection station where
+             the products were checked)
         "sensorElementList": [
           {
             "sensorReport": [
@@ -632,9 +648,17 @@ Now we’ve reached the bottom of the event. We can see that 52 kg from lot 1234
                 "type": "EffectiveDoseRate",
                 "value": 0.005,
                 "uom": "P71"
-              }
+              } ##(A sensor recorded an effective radiation dose rate of 
+                0.005 millisieverts per hour)
             ]
-          }
+          } ##(Now we connect all the dots. Two serialized products connected to po RE123099 
+          undergo an inspection at a specific location. So the  sensor records an effective radiation 
+          dose rate of 0.005 millisieverts per hour, and the products are documented as needing replacement.
+
+          So what? EPCIS connects the products, purchase order, inspection location, sensor measurement, and 
+          replacement status in one traceable record. This can accelerate replacement decisions, improve 
+          supplier communication, support audits, and prevent affected products from continuing through the 
+          supply chain.)
         ]
       },
       {

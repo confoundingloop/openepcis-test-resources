@@ -431,7 +431,7 @@
           }
         ]
       },
-      { ##(Imagine a food manufacturer packaging a buld product
+      { ##(Imagine a food manufacturer packaging a bulk product
         for shipment. We're connecting a shipping container with the material
         being packed inside it)
         "type": "AggregationEvent", ##(A logistics unit is being connected to its contents)

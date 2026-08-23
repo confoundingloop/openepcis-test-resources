@@ -743,28 +743,58 @@ Now we’ve reached the bottom of the event. We can see that 52 kg from lot 1234
           "example2:workingShift": "1"
         },
         "example4:otherThings": "some text"
+
+        
       },
+          ##(Asset Visibility Scenario - Jacobs Notes)
+          Imagine a governance manager responsible for thousands of reusable assets like company vehicles,
+          machinery, crates, containers, or kegs moving between warehouses, carriers, and customers.
+
+          With so many assets moving across different locations, 
+          How can the business consistently identify where each asset was last observed?
+
+          Let’s look at how JSON & EPCIS 2.0 can connect a specific asset to its location,
+          time, and sensor data within a traceable asset management record.
       {
-        "type": "ObjectEvent",
-        "eventTime": "2021-05-27T11:00:00+01:00",
+        "type": "ObjectEvent", 
+        ##(This event records an observation involving one specific asset, returnable asset
+        identified by a GRAI using Asset Identifier 8003)
+        ##(AI 8003 tells the system that 952012200000001004 is a GRAI)
+        "eventTime": "2026-08-24T11:00:00+01:00",
+        ##(So we see an asset observation event occured on August, 24, 2026 at 11AM local time)
         "eventTimeZoneOffset": "+01:00",
+        ##(This line describes how the local time was one hour ahead of UTC)
+        ##(JSON is painting asset journey story)
         "epcList": [
           "https://id.example.com/8003/952012200000001004"
+        ##(This identifies the specfic asset being observed. Application Identifier 8003
+          represents a Global Returnable Asset Identifier GRAI, which is used to identify returnable asset.
+
+          For our scenario, lets say this identifier belongs to one reusable keg.)
         ],
         "action": "OBSERVE",
+        ##(The system is recording information about the asset. It is not creating the asset or 
+        changing its identity)
         "bizStep": "https://ref.gs1.org/cbv/BizStep-sensor_reporting",
+        ##(A sensor is reporting information associated with the asset)
         "readPoint": {
           "id": "https://id.example.com/414/4012345000054"
+          ##(This identifies the read point where the EPCIS event was captured. Its important to 
+          note the read point and the reported coordinates serve different purposes. The read point
+          identifies the business capture point, while the sensor report provide the assets geographic location)
         },
         "sensorElementList": [
           {
             "sensorReport": [
               {
-                "type": "Angle",
+                "type": "Angle", ##(lat and long are angular coordinates/attributes)
                 "coordinateReferenceSystem": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+          ##(CRS84 provides standardized mapping rules so different
+           systems interpret and plot the coordinates consistently.)
                 "value": 42.698334,
                 "component": "cbv:Comp-latitude",
                 "uom": "DD"
+          ##(The assets latitude was recorded as 42.698334 decimal degrees)
               },
               {
                 "type": "Angle",
@@ -772,9 +802,38 @@ Now we’ve reached the bottom of the event. We can see that 52 kg from lot 1234
                 "value": 23.319941,
                 "component": "cbv:Comp-longitude",
                 "uom": "DD"
+          ##(The asset's longitude was recorded as 23.319941)
               }
             ]
           }
+          ##(Now we connect the story
+          Returnable asset 952012200000001004 was observed on August 24, 2028 at 11am local time. The event
+          connects the asset's GRAI to read point 4012345000054 at the following coordinates:
+          
+          Latitude: 42.698334°
+          Longitude: 23.319941°
+          
+          In our scenario, a data governance manager investigating a missing keg can use this event
+          as its last known recorded location instead of beginning with phone calls.)
+
+          ## So what? 
+          Whale instead of spending hours contacting warehouses, carriers,
+          and customers without a clear starting point, the business can begin
+          its investigation with the asset's last recorded location.
+
+          This helps the manager narrow the search, identify the appropriate
+          facility or trading partner, and recover the asset faster.
+
+          Across thousands of reusable assets, these location events could also
+          help identify repeated loss patterns, and assets that
+          are sitting idle instead of supporting operations.
+
+          Bottom line that visibility can help the business avoid unnecessary costs.
+
+          The value is not simply knowing where one asset was observed. It is creating
+          a repeatable and traceable process for managing an entire network of returnable
+          assets. Vehicles, Machinery, Industrial Contrainers, etc.
+
         ]
       }
     ]

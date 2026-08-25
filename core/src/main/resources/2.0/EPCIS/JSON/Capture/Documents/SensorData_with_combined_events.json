@@ -571,40 +571,88 @@ Now we’ve reached the bottom of the event. We can see that 52 kg from lot 1234
           }      So what? Well instead of discovering the problem later, the business can query
                 or subscribe to these alarm events and respond with a quality hold, investigation,
                 or quick maintenance action.
-        ]
-      },
-      {
+       
+            
+            
+      
+      ##Jacobs Notes
+      ##(Sensor Measurement divided into directional components.
+        Imagine a quality manager responsible for a fleet of helicopters undergoing
+        inspection and test flights. 
+        
+        One helicopter behaves unexpectedly during a test flight. However the engineering team 
+        needs more than the pilots description. They need movement data connected to the exact 
+        aircraft, testing location, and time. How can the business create a traceable record showing 
+        how a specific helicopter was moving in multiple directions?? Let's take a look)
         "type": "ObjectEvent",
-        "eventTime": "2020-05-08T15:00:00+01:00",
+      ##(This event records an observation involving one specific serialized object.
+        In our scenario, we are observing one helicopter. Nothing is being manufactured)
+        "eventTime": "2026-08-25T15:00:00+01:00",
+      ##(The movement observation occured on August 25, 2026 at 3pm local time)
         "eventTimeZoneOffset": "+01:00",
+      ##(The local time was one hour ahead of UTC)
         "epcList": [
-          "urn:epc:id:sgtin:4012345.022222.1234"
+          "urn:epc:id:sgtin:4012345.022222.1267"
+      ##(This identifies the exact serialized object being monitored. For our scenario
+        serial 1267 identifies the helicopter undergoing the test flight)
         ],
         "action": "OBSERVE",
+      ##(The system is recording what was detected. It is not changing the helicopter
+        or adding to it.
         "bizStep": "sensor_reporting",
+      ##(The purpose of this event is to report sensor info associated with the
+        serialized object)
         "readPoint": {
           "id": "urn:epc:id:sgln:4012345.00005.0"
+      ##(This identifies the read point where the EPCIS event was captured. In our scenario,
+        a designated testing location withing an aviation facility.
         },
         "sensorElementList": [
           {
             "sensorReport": [
               {
                 "type": "Speed",
-                "value": 4.5,
+        ##(The sensor report contains speed measurements. These measurements describe the
+           movement of the entire helicopter, not the movement of its rotor blades)
+                "value": 14.5,
                 "component": "example:x",
                 "uom": "MTS"
+        ##(The speed recorded along the X component is 14.5 metres per second)
               },
               {
                 "type": "Speed",
                 "value": 12.8,
                 "component": "example:y",
                 "uom": "MTS"
+        ##(The speed recorded along the Y component is 12.8 metres per second) 
               },
               {
                 "type": "Speed",
-                "value": 0,
+                "value": 100,
                 "component": "example:z",
                 "uom": "MTS"
+        ##(The speed recorded along the Z component is 100 metres per second at that moment)
+        ##(Now we connect the story. Helicopter 1267 was observed on August 25, 2026 at 3 pm at
+          read point 4012345.00005.0. The event records the helicopters speed across the three directional components) 
+          X: 14.5 m/s
+          Y: 12.8 m/s
+          Z: 100 m/s
+                
+        ##(Now the quality manager investigating unexpected movement during a test flight can connect the 
+           measurements to the exact helicopter, observation time, and testing location.
+
+           So what? Whale instead of relying on pilot recollection, emails, or disconnected logs, the engineering
+           team has movement data connected to the aircrafts traceability history. 
+          
+           Across repeated test flights, this info could help organizations compare movement patterns, investigate 
+           irregularities, and identify helicopters that may require additional inspection.
+
+           This could enable faster investigations, stronger quality management, better audit evidence, and
+           less aircraft downtime)
+
+        
+
+      
               }
             ]
           }

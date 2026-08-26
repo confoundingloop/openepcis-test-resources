@@ -580,10 +580,10 @@ Now we’ve reached the bottom of the event. We can see that 52 kg from lot 1234
         Imagine a quality manager responsible for a fleet of helicopters undergoing
         inspection and test flights. 
         
-        One helicopter behaves unexpectedly during a test flight. However the engineering team 
-        needs more than the pilots description. They need movement data connected to the exact 
+        One helicopter behaves unexpectedly during a test flight. The engineering team 
+        needs more than the pilot's description. They need movement data connected to the exact 
         aircraft, testing location, and time. How can the business create a traceable record showing 
-        how a specific helicopter was moving in multiple directions?? Let's take a look)
+        how a specific helicopter was moving in multiple directions??)
         "type": "ObjectEvent",
       ##(This event records an observation involving one specific serialized object.
         In our scenario, we are observing one helicopter. Nothing is being manufactured)
@@ -605,7 +605,7 @@ Now we’ve reached the bottom of the event. We can see that 52 kg from lot 1234
         "readPoint": {
           "id": "urn:epc:id:sgln:4012345.00005.0"
       ##(This identifies the read point where the EPCIS event was captured. In our scenario,
-        a designated testing location withing an aviation facility.
+        a designated testing location within an aviation facility.
         },
         "sensorElementList": [
           {
@@ -647,7 +647,7 @@ Now we’ve reached the bottom of the event. We can see that 52 kg from lot 1234
            Across repeated test flights, this info could help organizations compare movement patterns, investigate 
            irregularities, and identify helicopters that may require additional inspection.
 
-           This could enable faster investigations, stronger quality management, better audit evidence, and
+           This enables faster investigations, stronger quality management, better audit evidence, and
            less aircraft downtime)
 
         

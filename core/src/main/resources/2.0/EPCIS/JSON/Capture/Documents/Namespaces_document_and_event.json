@@ -1,0 +1,93 @@
+{
+    "@context": [
+	"https://ref.gs1.org/standards/epcis/epcis-context.jsonld",
+	{
+	    "exdoc": "https://ref.openepcis.io/ns/document/"
+	}
+    ],
+    "type": "EPCISDocument",
+    "schemaVersion": "2.0",
+    "creationDate": "2026-09-07T10:00:00.000+02:00",
+    "epcisBody": {
+	"eventList": [
+	    {
+		"type": "ObjectEvent",
+		"@context": [
+		    {
+			"exev": "https://ref.openepcis.io/ns/event/"
+		    }
+		],
+		"eventTime": "2026-09-07T10:01:00.000+02:00",
+		"eventTimeZoneOffset": "+02:00",
+		"epcList": [
+		    "https://id.gs1.org/01/00952000123459/21/1001",
+		    "https://id.gs1.org/01/00952000123459/21/1002"
+		],
+		"action": "OBSERVE",
+		"bizStep": "shipping",
+		"disposition": "in_transit",
+		"readPoint": {
+		    "id": "https://id.gs1.org/414/0952000123459"
+		},
+		"exdoc:division": "Outbound",
+		"exev:batch": "B-1001"
+	    },
+	    {
+		"type": "AggregationEvent",
+		"@context": [
+		    {
+			"exalt": "https://ref.openepcis.io/ns/document/"
+		    }
+		],
+		"eventTime": "2026-09-07T10:02:00.000+02:00",
+		"eventTimeZoneOffset": "+02:00",
+		"parentID": "https://id.gs1.org/00/009520001234567897",
+		"childEPCs": [
+		    "https://id.gs1.org/01/00952000234568/21/2002"
+		],
+		"action": "ADD",
+		"bizStep": "packing",
+		"readPoint": {
+		    "id": "https://id.gs1.org/414/0952000223456"
+		},
+		"exalt:division": "Packing"
+	    },
+	    {
+		"type": "TransactionEvent",
+		"eventTime": "2026-09-07T10:03:00.000+02:00",
+		"eventTimeZoneOffset": "+02:00",
+		"bizTransactionList": [
+		    {
+			"type": "po",
+			"bizTransaction": "urn:epcglobal:cbv:bt:0952000123459:PO-77"
+		    }
+		],
+		"epcList": [
+		    "https://id.gs1.org/01/00952000234568/21/2003"
+		],
+		"action": "OBSERVE",
+		"bizStep": "receiving",
+		"readPoint": {
+		    "id": "https://id.gs1.org/414/0952000123459"
+		},
+		"ilmd": {
+		    "cbvmda:countryOfOrigin": "276"
+		}
+	    },
+	    {
+		"type": "AssociationEvent",
+		"eventTime": "2026-09-07T10:04:00.000+02:00",
+		"eventTimeZoneOffset": "+02:00",
+		"parentID": "https://id.gs1.org/414/0952000223456",
+		"childEPCs": [
+		    "https://id.gs1.org/01/00952000123459/21/1003"
+		],
+		"action": "ADD",
+		"bizStep": "installing",
+		"readPoint": {
+		    "id": "https://id.gs1.org/414/0952000223456"
+		}
+	    }
+	]
+    }
+}

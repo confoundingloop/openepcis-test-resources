@@ -1,0 +1,26 @@
+{
+    "@context": [
+	"https://ref.gs1.org/standards/epcis/epcis-context.jsonld",
+	{
+	    "exev": "https://ref.openepcis.io/ns/event/"
+	},
+	{
+	    "exalt": "https://ref.openepcis.io/ns/document/"
+	}
+    ],
+    "type": "TransformationEvent",
+    "eventTime": "2026-09-07T10:05:00.000+02:00",
+    "eventTimeZoneOffset": "+02:00",
+    "inputEPCList": [
+	"https://id.gs1.org/01/00952000123459/21/1004"
+    ],
+    "outputEPCList": [
+	"https://id.gs1.org/01/00952000234568/21/2004"
+    ],
+    "bizStep": "commissioning",
+    "readPoint": {
+	"id": "https://id.gs1.org/414/0952000123459"
+    },
+    "exev:batch": "B-2004",
+    "exalt:division": "Production"
+}

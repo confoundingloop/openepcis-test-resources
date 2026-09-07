@@ -7,6 +7,7 @@
 /1.2/EPCIS/XML/Capture/Documents/EPCISDocument_with_comment.xml
 /1.2/EPCIS/XML/Capture/Documents/GS1_US_Pharma_Example_2_2_1_1.xml
 /1.2/EPCIS/XML/Capture/Documents/Jumbled_attributes_order.xml
+/1.2/EPCIS/XML/Capture/Documents/Namespaces_document_and_event.xml
 /1.2/EPCIS/XML/Capture/Documents/ObjectEvent.xml
 /1.2/EPCIS/XML/Capture/Documents/ObjectEvent_all_possible_fields.xml
 /1.2/EPCIS/XML/Capture/Documents/ObjectEvent_with_baseExtension_errorDeclaration.xml
@@ -32,6 +33,7 @@
 /2.0/EPCIS/JSON/Capture/Documents/CurieString_document.json
 /2.0/EPCIS/JSON/Capture/Documents/JumbledFieldsOrder.json
 /2.0/EPCIS/JSON/Capture/Documents/Namespaces_at_different_level.json
+/2.0/EPCIS/JSON/Capture/Documents/Namespaces_document_and_event.json
 /2.0/EPCIS/JSON/Capture/Documents/ObjectEvent.json
 /2.0/EPCIS/JSON/Capture/Documents/ObjectEvent_all_possible_fields.json
 /2.0/EPCIS/JSON/Capture/Documents/ObjectEvent_with_comment.json
@@ -65,6 +67,7 @@
 /2.0/EPCIS/JSON/Capture/Documents/epcisDocWithSensorComponent.json
 /2.0/EPCIS/JSON/Capture/Events/AggregationEvent.json
 /2.0/EPCIS/JSON/Capture/Events/AssociationEvent.json
+/2.0/EPCIS/JSON/Capture/Events/Namespaces_bare_event.json
 /2.0/EPCIS/JSON/Capture/Events/ObjectEvent.json
 /2.0/EPCIS/JSON/Capture/Events/TransactionEvent.json
 /2.0/EPCIS/JSON/Capture/Events/TransformationEvent.json
@@ -94,6 +97,7 @@
 /2.0/EPCIS/XML/Capture/Documents/JumbledFieldsOrder.xml
 /2.0/EPCIS/XML/Capture/Documents/Namespace_document.xml
 /2.0/EPCIS/XML/Capture/Documents/Namespaces_at_different_level.xml
+/2.0/EPCIS/XML/Capture/Documents/Namespaces_document_and_event.xml
 /2.0/EPCIS/XML/Capture/Documents/ObjectEvent.xml
 /2.0/EPCIS/XML/Capture/Documents/ObjectEvent_all_possible_fields.xml
 /2.0/EPCIS/XML/Capture/Documents/ObjectEvent_with_comment.xml
@@ -125,6 +129,7 @@
 /2.0/EPCIS/XML/Capture/Events/AggregationEvent.xml
 /2.0/EPCIS/XML/Capture/Events/AssociationEvent.xml
 /2.0/EPCIS/XML/Capture/Events/Namespace_event.xml
+/2.0/EPCIS/XML/Capture/Events/Namespaces_bare_event.xml
 /2.0/EPCIS/XML/Capture/Events/ObjectEvent.xml
 /2.0/EPCIS/XML/Capture/Events/TransactionEvent.xml
 /2.0/EPCIS/XML/Capture/Events/TransformationEvent.xml

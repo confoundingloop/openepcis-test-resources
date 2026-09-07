@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TransformationEvent xmlns:epcis="urn:epcglobal:epcis:xsd:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:exev="https://ref.openepcis.io/ns/event/"
+                     xmlns:exalt="https://ref.openepcis.io/ns/document/" schemaVersion="2.0" creationDate="2026-09-07T10:00:00.000+02:00">
+    <eventTime>2026-09-07T10:05:00.000+02:00</eventTime>
+    <eventTimeZoneOffset>+02:00</eventTimeZoneOffset>
+    <inputEPCList>
+        <epc>urn:epc:id:sgtin:0952000.012345.1004</epc>
+    </inputEPCList>
+    <outputEPCList>
+        <epc>urn:epc:id:sgtin:0952000.023456.2004</epc>
+    </outputEPCList>
+    <bizStep>urn:epcglobal:cbv:bizstep:commissioning</bizStep>
+    <readPoint>
+        <id>urn:epc:id:sgln:0952000.12345.0</id>
+    </readPoint>
+    <exev:batch>B-2004</exev:batch>
+    <exalt:division>Production</exalt:division>
+</TransformationEvent>

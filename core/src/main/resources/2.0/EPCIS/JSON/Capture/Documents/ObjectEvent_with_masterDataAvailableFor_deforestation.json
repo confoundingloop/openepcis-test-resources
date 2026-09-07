@@ -12,10 +12,10 @@
 		"eventTime": "2025-06-23T12:25:56Z",
 		"eventTimeZoneOffset": "+02:00",
 		"action": "OBSERVE",
-		"bizStep": "notifying",
+		"bizStep": "inspecting",
 		"persistentDisposition": {
 		    "set": [
-			"subject_to_regulation"
+			"conformant"
 		    ]
 		},
 		"quantityList": [

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <epcisq:EPCISQueryDocument xmlns:epcisq="urn:epcglobal:epcis-query:xsd:2" xmlns:sbdh="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" schemaVersion="2.0"
-                           createdAt="2023-03-31T20:23:48.418990744+05:30" xmlns:ext1="http://example.com/ext1/">
+                           creationDate="2023-03-31T20:23:48.418990744+05:30" xmlns:ext1="http://example.com/ext1/">
     <EPCISBody>
         <QueryResults>
             <resultsBody>

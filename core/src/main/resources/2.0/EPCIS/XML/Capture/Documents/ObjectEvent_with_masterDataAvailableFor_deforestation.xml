@@ -21,9 +21,9 @@
                     </quantityElement>
                 </quantityList>
                 <action>OBSERVE</action>
-                <bizStep>urn:epcglobal:cbv:bizstep:notifying</bizStep>
+                <bizStep>urn:epcglobal:cbv:bizstep:inspecting</bizStep>
                 <persistentDisposition>
-                    <set>urn:epcglobal:cbv:disp:subject_to_regulation</set>
+                    <set>urn:epcglobal:cbv:disp:conformant</set>
                 </persistentDisposition>
                 <bizTransactionList>
                     <bizTransaction type="urn:epcglobal:cbv:btt:inv">https://transactions.sender.example/inv/XYZ123</bizTransaction>

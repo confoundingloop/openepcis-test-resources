@@ -1,4 +1,4 @@
-<epcis:ObjectEvent schemaVersion="2.0" creationDate="2013-06-04T14:59:02.099+02:00" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+<ObjectEvent schemaVersion="2.0" creationDate="2013-06-04T14:59:02.099+02:00" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext1="http://example.com/ext1/" xmlns:ext2="http://example.com/ext2/"
                    xmlns:ext3="http://example.com/ext3/"
                    xmlns:epcis="urn:epcglobal:xsd:2">
@@ -43,4 +43,4 @@
             <ext3:string xsi:type="xsd:string">stringInObjectInObject</ext3:string>
         </ext2:object>
     </ext1:object>
-</epcis:ObjectEvent>
+</ObjectEvent>

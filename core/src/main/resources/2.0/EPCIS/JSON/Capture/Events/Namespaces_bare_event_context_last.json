@@ -1,0 +1,22 @@
+{
+    "type": "TransformationEvent",
+    "eventTime": "2026-09-08T09:06:00.000+02:00",
+    "eventTimeZoneOffset": "+02:00",
+    "inputEPCList": [
+	"https://id.gs1.org/01/00952000123459/21/1006"
+    ],
+    "outputEPCList": [
+	"https://id.gs1.org/01/00952000234568/21/2006"
+    ],
+    "bizStep": "commissioning",
+    "readPoint": {
+	"id": "https://id.gs1.org/414/0952000123459"
+    },
+    "exev:line": "L-9",
+    "@context": [
+	"https://ref.gs1.org/standards/epcis/epcis-context.jsonld",
+	{
+	    "exev": "https://ref.openepcis.io/ns/event/"
+	}
+    ]
+}

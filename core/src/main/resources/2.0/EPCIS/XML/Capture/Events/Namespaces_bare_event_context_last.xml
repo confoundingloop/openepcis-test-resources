@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- XML counterpart of Namespaces_bare_event_context_last.json. -->
+<TransformationEvent xmlns:epcis="urn:epcglobal:epcis:xsd:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:exev="https://ref.openepcis.io/ns/event/"
+                     schemaVersion="2.0" creationDate="2026-09-08T09:00:00.000+02:00">
+    <eventTime>2026-09-08T09:06:00.000+02:00</eventTime>
+    <eventTimeZoneOffset>+02:00</eventTimeZoneOffset>
+    <inputEPCList>
+        <epc>urn:epc:id:sgtin:0952000.012345.1006</epc>
+    </inputEPCList>
+    <outputEPCList>
+        <epc>urn:epc:id:sgtin:0952000.023456.2006</epc>
+    </outputEPCList>
+    <bizStep>urn:epcglobal:cbv:bizstep:commissioning</bizStep>
+    <readPoint>
+        <id>urn:epc:id:sgln:0952000.12345.0</id>
+    </readPoint>
+    <exev:line>L-9</exev:line>
+</TransformationEvent>

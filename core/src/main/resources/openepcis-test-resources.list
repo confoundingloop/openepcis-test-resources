@@ -33,6 +33,8 @@
 /2.0/EPCIS/JSON/Capture/Documents/CurieString_document.json
 /2.0/EPCIS/JSON/Capture/Documents/JumbledFieldsOrder.json
 /2.0/EPCIS/JSON/Capture/Documents/Namespaces_at_different_level.json
+/2.0/EPCIS/JSON/Capture/Documents/Namespaces_context_after_type.json
+/2.0/EPCIS/JSON/Capture/Documents/Namespaces_context_last.json
 /2.0/EPCIS/JSON/Capture/Documents/Namespaces_document_and_event.json
 /2.0/EPCIS/JSON/Capture/Documents/ObjectEvent.json
 /2.0/EPCIS/JSON/Capture/Documents/ObjectEvent_all_possible_fields.json
@@ -68,6 +70,8 @@
 /2.0/EPCIS/JSON/Capture/Events/AggregationEvent.json
 /2.0/EPCIS/JSON/Capture/Events/AssociationEvent.json
 /2.0/EPCIS/JSON/Capture/Events/Namespaces_bare_event.json
+/2.0/EPCIS/JSON/Capture/Events/Namespaces_bare_event_context_after_type.json
+/2.0/EPCIS/JSON/Capture/Events/Namespaces_bare_event_context_last.json
 /2.0/EPCIS/JSON/Capture/Events/ObjectEvent.json
 /2.0/EPCIS/JSON/Capture/Events/TransactionEvent.json
 /2.0/EPCIS/JSON/Capture/Events/TransformationEvent.json
@@ -97,6 +101,8 @@
 /2.0/EPCIS/XML/Capture/Documents/JumbledFieldsOrder.xml
 /2.0/EPCIS/XML/Capture/Documents/Namespace_document.xml
 /2.0/EPCIS/XML/Capture/Documents/Namespaces_at_different_level.xml
+/2.0/EPCIS/XML/Capture/Documents/Namespaces_context_after_type.xml
+/2.0/EPCIS/XML/Capture/Documents/Namespaces_context_last.xml
 /2.0/EPCIS/XML/Capture/Documents/Namespaces_document_and_event.xml
 /2.0/EPCIS/XML/Capture/Documents/ObjectEvent.xml
 /2.0/EPCIS/XML/Capture/Documents/ObjectEvent_all_possible_fields.xml
@@ -130,6 +136,8 @@
 /2.0/EPCIS/XML/Capture/Events/AssociationEvent.xml
 /2.0/EPCIS/XML/Capture/Events/Namespace_event.xml
 /2.0/EPCIS/XML/Capture/Events/Namespaces_bare_event.xml
+/2.0/EPCIS/XML/Capture/Events/Namespaces_bare_event_context_after_type.xml
+/2.0/EPCIS/XML/Capture/Events/Namespaces_bare_event_context_last.xml
 /2.0/EPCIS/XML/Capture/Events/ObjectEvent.xml
 /2.0/EPCIS/XML/Capture/Events/TransactionEvent.xml
 /2.0/EPCIS/XML/Capture/Events/TransformationEvent.xml

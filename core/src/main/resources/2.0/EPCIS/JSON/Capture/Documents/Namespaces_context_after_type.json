@@ -1,0 +1,55 @@
+{
+    "type": "EPCISDocument",
+    "@context": [
+	"https://ref.gs1.org/standards/epcis/epcis-context.jsonld",
+	{
+	    "exdoc": "https://ref.openepcis.io/ns/document/"
+	}
+    ],
+    "schemaVersion": "2.0",
+    "creationDate": "2026-09-08T09:00:00.000+02:00",
+    "epcisBody": {
+	"eventList": [
+	    {
+		"type": "ObjectEvent",
+		"@context": [
+		    {
+			"exev": "https://ref.openepcis.io/ns/event/"
+		    }
+		],
+		"eventTime": "2026-09-08T09:01:00.000+02:00",
+		"eventTimeZoneOffset": "+02:00",
+		"epcList": [
+		    "https://id.gs1.org/01/00952000123459/21/1001"
+		],
+		"action": "OBSERVE",
+		"bizStep": "shipping",
+		"readPoint": {
+		    "id": "https://id.gs1.org/414/0952000123459"
+		},
+		"exdoc:division": "Outbound",
+		"exev:batch": "B-1001"
+	    },
+	    {
+		"type": "AggregationEvent",
+		"@context": [
+		    {
+			"exalt": "https://ref.openepcis.io/ns/document/"
+		    }
+		],
+		"eventTime": "2026-09-08T09:02:00.000+02:00",
+		"eventTimeZoneOffset": "+02:00",
+		"parentID": "https://id.gs1.org/00/009520001234567897",
+		"childEPCs": [
+		    "https://id.gs1.org/01/00952000234568/21/2002"
+		],
+		"action": "ADD",
+		"bizStep": "packing",
+		"readPoint": {
+		    "id": "https://id.gs1.org/414/0952000223456"
+		},
+		"exalt:division": "Packing"
+	    }
+	]
+    }
+}

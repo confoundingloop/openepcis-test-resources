@@ -1,0 +1,21 @@
+{
+    "type": "AssociationEvent",
+    "@context": [
+	"https://ref.gs1.org/standards/epcis/epcis-context.jsonld",
+	{
+	    "exev": "https://ref.openepcis.io/ns/event/"
+	}
+    ],
+    "eventTime": "2026-09-08T09:05:00.000+02:00",
+    "eventTimeZoneOffset": "+02:00",
+    "parentID": "https://id.gs1.org/414/0952000223456",
+    "childEPCs": [
+	"https://id.gs1.org/01/00952000123459/21/1005"
+    ],
+    "action": "ADD",
+    "bizStep": "installing",
+    "readPoint": {
+	"id": "https://id.gs1.org/414/0952000223456"
+    },
+    "exev:bay": "BAY-2"
+}

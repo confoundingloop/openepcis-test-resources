@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- XML counterpart of Namespaces_context_after_type.json. XML has no @context, the JSON twin is
+the one that exercises @context placed after the type property. -->
+<epcis:EPCISDocument xmlns:epcis="urn:epcglobal:epcis:xsd:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:exdoc="https://ref.openepcis.io/ns/document/"
+                     schemaVersion="2.0" creationDate="2026-09-08T09:00:00.000+02:00">
+    <EPCISBody>
+        <EventList>
+            <ObjectEvent xmlns:exev="https://ref.openepcis.io/ns/event/">
+                <eventTime>2026-09-08T09:01:00.000+02:00</eventTime>
+                <eventTimeZoneOffset>+02:00</eventTimeZoneOffset>
+                <epcList>
+                    <epc>urn:epc:id:sgtin:0952000.012345.1001</epc>
+                </epcList>
+                <action>OBSERVE</action>
+                <bizStep>urn:epcglobal:cbv:bizstep:shipping</bizStep>
+                <readPoint>
+                    <id>urn:epc:id:sgln:0952000.12345.0</id>
+                </readPoint>
+                <exdoc:division>Outbound</exdoc:division>
+                <exev:batch>B-1001</exev:batch>
+            </ObjectEvent>
+            <AggregationEvent xmlns:exalt="https://ref.openepcis.io/ns/document/">
+                <eventTime>2026-09-08T09:02:00.000+02:00</eventTime>
+                <eventTimeZoneOffset>+02:00</eventTimeZoneOffset>
+                <parentID>urn:epc:id:sscc:0952000.0123456789</parentID>
+                <childEPCs>
+                    <epc>urn:epc:id:sgtin:0952000.023456.2002</epc>
+                </childEPCs>
+                <action>ADD</action>
+                <bizStep>urn:epcglobal:cbv:bizstep:packing</bizStep>
+                <readPoint>
+                    <id>urn:epc:id:sgln:0952000.22345.0</id>
+                </readPoint>
+                <exalt:division>Packing</exalt:division>
+            </AggregationEvent>
+        </EventList>
+    </EPCISBody>
+</epcis:EPCISDocument>

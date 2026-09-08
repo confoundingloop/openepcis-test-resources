@@ -1,0 +1,62 @@
+{
+    "type": "EPCISDocument",
+    "schemaVersion": "2.0",
+    "creationDate": "2026-09-08T09:00:00.000+02:00",
+    "@context": [
+	"https://ref.gs1.org/standards/epcis/epcis-context.jsonld",
+	{
+	    "exdoc": "https://ref.openepcis.io/ns/document/"
+	}
+    ],
+    "epcisBody": {
+	"eventList": [
+	    {
+		"type": "TransactionEvent",
+		"eventTime": "2026-09-08T09:03:00.000+02:00",
+		"eventTimeZoneOffset": "+02:00",
+		"bizTransactionList": [
+		    {
+			"type": "po",
+			"bizTransaction": "urn:epcglobal:cbv:bt:0952000123459:PO-77"
+		    }
+		],
+		"epcList": [
+		    "https://id.gs1.org/01/00952000234568/21/2003"
+		],
+		"action": "OBSERVE",
+		"bizStep": "receiving",
+		"readPoint": {
+		    "id": "https://id.gs1.org/414/0952000123459"
+		},
+		"exdoc:division": "Inbound",
+		"exev:dock": "D-4",
+		"@context": [
+		    {
+			"exev": "https://ref.openepcis.io/ns/event/"
+		    }
+		]
+	    },
+	    {
+		"type": "TransformationEvent",
+		"eventTime": "2026-09-08T09:04:00.000+02:00",
+		"eventTimeZoneOffset": "+02:00",
+		"inputEPCList": [
+		    "https://id.gs1.org/01/00952000123459/21/1004"
+		],
+		"outputEPCList": [
+		    "https://id.gs1.org/01/00952000234568/21/2004"
+		],
+		"bizStep": "commissioning",
+		"readPoint": {
+		    "id": "https://id.gs1.org/414/0952000123459"
+		},
+		"exalt:line": "L-7",
+		"@context": [
+		    {
+			"exalt": "https://ref.openepcis.io/ns/document/"
+		    }
+		]
+	    }
+	]
+    }
+}

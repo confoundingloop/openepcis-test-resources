@@ -461,13 +461,13 @@
                 "uom": "A93"
               },
               {
-                "type": "Molar_concentration",
+                "type": "MolarMass",
                 "chemicalSubstance": "https://identifiers.org/inchikey:CZMRCDWAGMRECN-UGDNZRGBSA-N",
                 "value": 0.18,
                 "uom": "C35"
               },
               {
-                "type": "Molar_concentration",
+                "type": "MolarMass",
                 "microorganism": "https://www.ncbi.nlm.nih.gov/taxonomy/1126011",
                 "value": 0.05,
                 "uom": "C35"

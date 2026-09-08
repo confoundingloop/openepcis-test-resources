@@ -538,10 +538,12 @@
           {
             "sensorReport": [
               {
+                "type": "Temperature",
                 "exception": "gs1:ERROR_CONDITION",
                 "uriValue": "https://example.com/ErrorCode-A827"
               },
               {
+                "type": "AbsoluteHumidity",
                 "exception": "gs1:ALARM_CONDITION",
                 "booleanValue": true
               }
@@ -610,7 +612,7 @@
           {
             "sensorReport": [
               {
-                "type": "EffectiveDoseRate",
+                "type": "DoseEquivalentRate",
                 "value": 0.005,
                 "uom": "P71"
               }

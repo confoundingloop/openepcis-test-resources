@@ -241,8 +241,8 @@
                         </readPoint>
                         <sensorElementList>
                             <sensorElement>
-                                <sensorReport exception="gs1:ERROR_CONDITION" uriValue="https://example.com/ErrorCode-A827"/>
-                                <sensorReport exception="gs1:ALARM_CONDITION" booleanValue="true"/>
+                                <sensorReport type="gs1:Temperature" exception="gs1:ERROR_CONDITION" uriValue="https://example.com/ErrorCode-A827"/>
+                                <sensorReport type="gs1:AbsoluteHumidity" exception="gs1:ALARM_CONDITION" booleanValue="true"/>
                             </sensorElement>
                         </sensorElementList>
                     </ObjectEvent>
@@ -283,7 +283,7 @@
                         </readPoint>
                         <sensorElementList>
                             <sensorElement>
-                                <sensorReport type="gs1:EffectiveDoseRate" value="0.005" uom="P71"/>
+                                <sensorReport type="gs1:DoseEquivalentRate" value="0.005" uom="P71"/>
                             </sensorElement>
                         </sensorElementList>
                     </TransactionEvent>

@@ -3,7 +3,9 @@
                            xmlns:cbv="https://ref.gs1.org/cbv/" xmlns:ext1="https://ns.ext.de/epcis/" schemaVersion="2.0" creationDate="2023-01-11T12:00:00.000+01:00"
                            xsi:schemaLocation="urn:epcglobal:epcis:xsd:2 EPCglobal-epcis-2_0.xsd">
     <EPCISBody>
-        <QueryResults>
+        <epcisq:QueryResults>
+            <queryName>SimpleEventQuery</queryName>
+            <subscriptionID>32d2aec1-a6d2-46d9-900a-24124288cce1</subscriptionID>
             <resultsBody>
                 <EventList>
                     <ObjectEvent>
@@ -44,6 +46,6 @@
                     </ObjectEvent>
                 </EventList>
             </resultsBody>
-        </QueryResults>
+        </epcisq:QueryResults>
     </EPCISBody>
 </epcisq:EPCISQueryDocument>

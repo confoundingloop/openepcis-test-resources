@@ -75,9 +75,7 @@
                                 <ext1:default xmlns:ext1="http://example.com/ext1/">stringAsDefaultValue</ext1:default>
                                 <ext1:int xmlns:ext1="http://example.com/ext1/" xsi:type="xsd:integer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">10</ext1:int>
                                 <ext1:float xmlns:ext1="http://example.com/ext1/" xsi:type="xsd:double" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20</ext1:float>
-                                <ext1:time xmlns:ext1="http://example.com/ext1/" xsi:type="xsd:dateTime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                                    2013-06-08T14:58:56.591Z
-                                </ext1:time>
+                                <ext1:time xmlns:ext1="http://example.com/ext1/" xsi:type="xsd:dateTime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2013-06-08T14:58:56.591Z</ext1:time>
                                 <ext1:boolean xmlns:ext1="http://example.com/ext1/" xsi:type="xsd:boolean" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">true</ext1:boolean>
                                 <ext1:string xmlns:ext1="http://example.com/ext1/" xsi:type="xsd:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">string</ext1:string>
                                 <ext1:object xmlns:ext1="http://example.com/ext1/">
@@ -96,9 +94,7 @@
                                 </ext1:object>
                                 <ext1:array xmlns:ext1="http://example.com/ext1/" xsi:type="xsd:integer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">12</ext1:array>
                                 <ext1:array xmlns:ext1="http://example.com/ext1/" xsi:type="xsd:double" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">22</ext1:array>
-                                <ext1:array xmlns:ext1="http://example.com/ext1/" xsi:type="xsd:dateTime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-                                    2013-06-08T14:58:56.591Z
-                                </ext1:array>
+                                <ext1:array xmlns:ext1="http://example.com/ext1/" xsi:type="xsd:dateTime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2013-06-08T14:58:56.591Z</ext1:array>
                                 <ext1:array xmlns:ext1="http://example.com/ext1/" xsi:type="xsd:boolean" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">true</ext1:array>
                                 <ext1:array xmlns:ext1="http://example.com/ext1/" xsi:type="xsd:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">stringInArray
                                 </ext1:array>
@@ -148,8 +144,7 @@
                 </ext1:object>
                 <ext1:array xmlns:ext1="http://example.com/ext1/" xsi:type="xsd:integer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">12</ext1:array>
                 <ext1:array xmlns:ext1="http://example.com/ext1/" xsi:type="xsd:double" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">22</ext1:array>
-                <ext1:array xmlns:ext1="http://example.com/ext1/" xsi:type="xsd:dateTime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2013-06-08T14:58:56.591Z
-                </ext1:array>
+                <ext1:array xmlns:ext1="http://example.com/ext1/" xsi:type="xsd:dateTime" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2013-06-08T14:58:56.591Z</ext1:array>
                 <ext1:array xmlns:ext1="http://example.com/ext1/" xsi:type="xsd:boolean" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">true</ext1:array>
                 <ext1:array xmlns:ext1="http://example.com/ext1/" xsi:type="xsd:string" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">stringInArray</ext1:array>
                 <ext1:array xmlns:ext1="http://example.com/ext1/">

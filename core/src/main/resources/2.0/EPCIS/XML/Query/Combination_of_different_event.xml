@@ -2,7 +2,9 @@
 <epcisq:EPCISQueryDocument xmlns:epcisq="urn:epcglobal:epcis-query:xsd:2" xmlns:sbdh="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader" schemaVersion="2.0"
                            creationDate="2023-03-31T20:23:48.418990744+05:30" xmlns:ext1="http://example.com/ext1/">
     <EPCISBody>
-        <QueryResults>
+        <epcisq:QueryResults>
+            <queryName>SimpleEventQuery</queryName>
+            <subscriptionID>32d2aec1-a6d2-46d9-900a-24124288cce1</subscriptionID>
             <resultsBody>
                 <EventList>
                     <ObjectEvent>
@@ -140,6 +142,6 @@
                     </AssociationEvent>
                 </EventList>
             </resultsBody>
-        </QueryResults>
+        </epcisq:QueryResults>
     </EPCISBody>
 </epcisq:EPCISQueryDocument>

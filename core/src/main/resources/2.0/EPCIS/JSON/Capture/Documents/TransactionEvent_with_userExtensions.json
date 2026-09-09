@@ -34,7 +34,7 @@
           {
             "sensorReport": [
               {
-                "type": "EffectiveDoseRate",
+                "type": "DoseEquivalentRate",
                 "value": 0.005,
                 "uom": "P71"
               }

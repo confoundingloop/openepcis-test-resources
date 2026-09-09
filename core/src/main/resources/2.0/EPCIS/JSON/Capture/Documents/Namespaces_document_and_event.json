@@ -70,9 +70,7 @@
 		"readPoint": {
 		    "id": "https://id.gs1.org/414/0952000123459"
 		},
-		"ilmd": {
-		    "cbvmda:countryOfOrigin": "276"
-		}
+		"cbvmda:countryOfOrigin": "276"
 	    },
 	    {
 		"type": "AssociationEvent",

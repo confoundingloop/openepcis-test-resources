@@ -8,6 +8,11 @@
             <ObjectEvent>
                 <eventTime>2025-06-23T12:25:56Z</eventTime>
                 <eventTimeZoneOffset>+02:00</eventTimeZoneOffset>
+                <action>OBSERVE</action>
+                <bizStep>urn:epcglobal:cbv:bizstep:inspecting</bizStep>
+                <bizTransactionList>
+                    <bizTransaction type="urn:epcglobal:cbv:btt:inv">https://transactions.sender.example/inv/XYZ123</bizTransaction>
+                </bizTransactionList>
                 <quantityList>
                     <quantityElement>
                         <epcClass>https://id.gs1.org/01/09506000134369/10/ABC12345</epcClass>
@@ -20,14 +25,9 @@
                         <uom>KGM</uom>
                     </quantityElement>
                 </quantityList>
-                <action>OBSERVE</action>
-                <bizStep>urn:epcglobal:cbv:bizstep:inspecting</bizStep>
                 <persistentDisposition>
                     <set>urn:epcglobal:cbv:disp:conformant</set>
                 </persistentDisposition>
-                <bizTransactionList>
-                    <bizTransaction type="urn:epcglobal:cbv:btt:inv">https://transactions.sender.example/inv/XYZ123</bizTransaction>
-                </bizTransactionList>
                 <gs1:masterDataAvailableFor>
                     <id>https://id.gs1.org/01/09506000134369/10/ABC12345</id>
                     <regulatoryInformation>

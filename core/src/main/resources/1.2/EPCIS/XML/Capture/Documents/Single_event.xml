@@ -1,4 +1,4 @@
-<TransactionEvent>
+<TransactionEvent xmlns:epcis="urn:epcglobal:epcis:xsd:1" schemaVersion="1.2" creationDate="2020-07-03T09:00:00.0Z">
     <eventTime>2019-10-04T14:12:00.000+01:00</eventTime>
     <eventTimeZoneOffset>+01:00</eventTimeZoneOffset>
     <bizTransactionList>

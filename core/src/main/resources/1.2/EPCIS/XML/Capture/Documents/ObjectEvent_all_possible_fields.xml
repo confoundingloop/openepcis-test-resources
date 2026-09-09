@@ -139,7 +139,6 @@
                         </persistentDisposition>
                     </extension>
                 </extension>
-                <certificationInfo>test certification</certificationInfo>
                 <ext1:default xmlns:ext1="http://example.com/ext1/">stringAsDefaultValue</ext1:default>
                 <ext1:int xmlns:ext1="http://example.com/ext1/" xsi:type="xsd:integer" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">10</ext1:int>
                 <ext1:float xmlns:ext1="http://example.com/ext1/" xsi:type="xsd:double" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">20</ext1:float>

@@ -9,7 +9,7 @@
                 <baseExtension>
                     <eventID>ni:///sha-256;45a99ca926fdb62b61bb2b29620e1dcdd5b0109613700f7e179881d64d8fabf1?ver=CBV2.0</eventID>
                     <errorDeclaration>
-                        <declarationTime>2006-11-07T13:00Z</declarationTime>
+                        <declarationTime>2006-11-07T14:00:00.000+01:00</declarationTime>
                         <reason>urn:epcglobal:cbv:er:incorrect_data</reason>
                         <correctiveEventIDs>
                             <correctiveEventID>ni:///sha-256;fec9667280c4710a3fa9558b7bc8ddc2ced0dc442d87f82becae24bb6ca6a46f?ver=CBV2.0</correctiveEventID>
@@ -106,7 +106,6 @@
                                 <ext1:string>string</ext1:string>
                             </sensorElement>
                         </sensorElementList>
-                        <certificationInfo>https://accreditation-council.example.org/certificate/ABC12345</certificationInfo>
                     </extension>
                 </extension>
             </TransactionEvent>

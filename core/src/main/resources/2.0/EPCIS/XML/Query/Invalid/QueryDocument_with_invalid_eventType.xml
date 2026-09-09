@@ -2,7 +2,9 @@
 <epcisq:EPCISQueryDocument xmlns:epcisq="urn:epcglobal:epcis-query:xsd:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="2.0"
                            creationDate="2005-07-11T11:30:47.0Z">
     <EPCISBody>
-        <QueryResults>
+        <epcisq:QueryResults>
+            <queryName>SimpleEventQuery</queryName>
+            <subscriptionID>32d2aec1-a6d2-46d9-900a-24124288cce1</subscriptionID>
             <resultsBody>
                 <EventList>
                     <ObjectEventInvalid>
@@ -28,6 +30,6 @@
                     </ObjectEventInvalid>
                 </EventList>
             </resultsBody>
-        </QueryResults>
+        </epcisq:QueryResults>
     </EPCISBody>
 </epcisq:EPCISQueryDocument>

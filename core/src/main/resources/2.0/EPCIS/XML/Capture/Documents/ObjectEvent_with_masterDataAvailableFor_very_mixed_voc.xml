@@ -10,6 +10,12 @@
             <ObjectEvent>
                 <eventTime>2024-11-22T11:30:00+01:00</eventTime>
                 <eventTimeZoneOffset>+01:00</eventTimeZoneOffset>
+                <action>ADD</action>
+                <bizStep>urn:epcglobal:cbv:bizstep:commissioning</bizStep>
+                <disposition>urn:epcglobal:cbv:disp:active</disposition>
+                <readPoint>
+                    <id>https://id.gs1.org/414/4262431780029</id>
+                </readPoint>
                 <quantityList>
                     <quantityElement>
                         <epcClass>https://id.gs1.de/01/04012345999969/10/Batch1</epcClass>
@@ -20,12 +26,6 @@
                         <quantity>25</quantity>
                     </quantityElement>
                 </quantityList>
-                <action>ADD</action>
-                <bizStep>urn:epcglobal:cbv:bizstep:commissioning</bizStep>
-                <disposition>urn:epcglobal:cbv:disp:active</disposition>
-                <readPoint>
-                    <id>https://id.gs1.org/414/4262431780029</id>
-                </readPoint>
                 <openepcis:masterDataAvailableFor>
                     <id>https://id.gs1.de/01/04012345999969/10/Batch1</id>
                     <gs1:expirationDate>2024-11-20</gs1:expirationDate>

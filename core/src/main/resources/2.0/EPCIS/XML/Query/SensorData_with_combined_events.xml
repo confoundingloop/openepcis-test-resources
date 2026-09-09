@@ -3,7 +3,9 @@
                            xmlns:cbvmda="urn:epcglobal:cbv:mda" xmlns:example="https://ns.example.com/epcis" xmlns:example1="https://ns.example1.com/epcis"
                            xmlns:example2="https://ns.example2.com/epcis" xmlns:example3="https://ns.example3.com/epcis" xmlns:example4="https://ns.example4.com/epcis">
     <EPCISBody>
-        <QueryResults>
+        <epcisq:QueryResults>
+            <queryName>SimpleEventQuery</queryName>
+            <subscriptionID>32d2aec1-a6d2-46d9-900a-24124288cce1</subscriptionID>
             <resultsBody>
                 <EventList>
                     <ObjectEvent>
@@ -368,6 +370,6 @@
                     </ObjectEvent>
                 </EventList>
             </resultsBody>
-        </QueryResults>
+        </epcisq:QueryResults>
     </EPCISBody>
 </epcisq:EPCISQueryDocument>

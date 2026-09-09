@@ -24,9 +24,9 @@
 			"uom": "KGM"
 		    }
 		],
-		"action": "OBSERVE",
-		"bizStep": "shipping",
-		"disposition": "in_transit",
+		"action": "ADD",
+		"bizStep": "commissioning",
+		"disposition": "active",
 		"readPoint": {
 		    "id": "urn:epc:id:sgln:0614141.07346.1234"
 		},

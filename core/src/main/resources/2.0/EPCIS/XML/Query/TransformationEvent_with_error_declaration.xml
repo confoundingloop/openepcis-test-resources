@@ -2,7 +2,9 @@
 <epcisq:EPCISQueryDocument xmlns:epcisq="urn:epcglobal:epcis-query:xsd:2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cbvmda="urn:epcglobal:cbv:mda:"
                             schemaVersion="2.0" creationDate="2020-01-15T07:47:21.677+00:00">
 <EPCISBody>
-    <QueryResults>
+    <epcisq:QueryResults>
+        <queryName>SimpleEventQuery</queryName>
+        <subscriptionID>32d2aec1-a6d2-46d9-900a-24124288cce1</subscriptionID>
         <resultsBody>
             <EventList>
                 <TransformationEvent xmlns:ns1="urn:epcglobal:epcis-query:xsd:2" xmlns:ns2="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"
@@ -11,7 +13,7 @@
                     <eventTimeZoneOffset>+01:00</eventTimeZoneOffset>
                     <eventID>urn:uuid:374d95fc-9457-4a51-bd6a-0bba133845a8</eventID>
                     <errorDeclaration>
-                        <declarationTime>2020-01-14T23:00Z</declarationTime>
+                        <declarationTime>2020-01-15T00:00:00+01:00</declarationTime>
                         <reason>urn:epcglobal:cbv:er:incorrect_data</reason>
                         <correctiveEventIDs>
                             <correctiveEventID>urn:uuid:404d95fc-9457-4a51-bd6a-0bba133845a8</correctiveEventID>
@@ -74,6 +76,6 @@
                 </TransformationEvent>
             </EventList>
         </resultsBody>
-    </QueryResults>
+    </epcisq:QueryResults>
 </EPCISBody>
 </epcisq:EPCISQueryDocument>

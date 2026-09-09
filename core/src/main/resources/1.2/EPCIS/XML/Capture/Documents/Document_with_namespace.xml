@@ -1,15 +1,18 @@
-<epcis:EPCISDocument schemaVersion="2.0" creationDate="2013-06-04T14:59:02.099+02:00" xmlns:example="http://ns.example.com/epcis" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+<epcis:EPCISDocument schemaVersion="1.2" creationDate="2013-06-04T14:59:02.099+02:00" xmlns:example="http://ns.example.com/epcis" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
                      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ext1="http://example.com/ext1/" xmlns:ext2="http://example.com/ext2/"
-                     xmlns:ext3="http://example.com/ext3/" xmlns:epcis="urn:epcglobal:xsd:2">
+                     xmlns:ext3="http://example.com/ext3/" xmlns:epcis="urn:epcglobal:epcis:xsd:1">
     <EPCISBody>
         <EventList>
-            <ObjectEvent xmlns:epcis="urn:epcglobal:xsd:2">
+            <ObjectEvent xmlns:epcis="urn:epcglobal:epcis:xsd:1">
                 <eventTime>2022-04-13T12:35:29.017069617Z</eventTime>
                 <recordTime>2022-12-28T10:17:28.647Z</recordTime>
                 <eventTimeZoneOffset>+02:00</eventTimeZoneOffset>
                 <baseExtension>
                     <eventID>urn:uuid:bf602366-6657-49fb-a729-9610ccef086e</eventID>
                 </baseExtension>
+                <epcList>
+                    <epc>urn:epc:id:sgtin:0614141.107346.2018</epc>
+                </epcList>
                 <action>ADD</action>
                 <bizStep>urn:epcglobal:cbv:bizstep:commissioning</bizStep>
                 <readPoint xmlns:epcglobal="urn:epcglobal:xsd:1" xmlns:ns1="urn:epcglobal:epcis-query:xsd:2">

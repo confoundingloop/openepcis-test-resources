@@ -11,16 +11,9 @@
                 <epcList>
                     <epc>urn:epc:id:sgtin:4012345.011111.9876</epc>
                 </epcList>
-                <quantityList>
-                    <quantityElement>
-                        <epcClass>urn:epc:class:lgtin:4023333.002000.2019-10-07</epcClass>
-                        <quantity>5</quantity>
-                        <uom>KGM</uom>
-                    </quantityElement>
-                </quantityList>
-                <action>OBSERVE</action>
-                <bizStep>urn:epcglobal:cbv:bizstep:shipping</bizStep>
-                <disposition>urn:epcglobal:cbv:disp:in_transit</disposition>
+                <action>ADD</action>
+                <bizStep>urn:epcglobal:cbv:bizstep:commissioning</bizStep>
+                <disposition>urn:epcglobal:cbv:disp:active</disposition>
                 <readPoint>
                     <id>urn:epc:id:sgln:0614141.07346.1234</id>
                 </readPoint>
@@ -30,6 +23,13 @@
                 <bizTransactionList>
                     <bizTransaction type="urn:epcglobal:cbv:btt:po">http://transaction.acme.com/po/12345678</bizTransaction>
                 </bizTransactionList>
+                <quantityList>
+                    <quantityElement>
+                        <epcClass>urn:epc:class:lgtin:4023333.002000.2019-10-07</epcClass>
+                        <quantity>5</quantity>
+                        <uom>KGM</uom>
+                    </quantityElement>
+                </quantityList>
                 <sourceList>
                     <source type="urn:epcglobal:cbv:sdt:owning_party">urn:epc:id:pgln:4012345.00000</source>
                 </sourceList>

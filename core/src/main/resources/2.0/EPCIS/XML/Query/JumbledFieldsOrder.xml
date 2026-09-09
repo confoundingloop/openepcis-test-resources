@@ -1,7 +1,9 @@
 <epcisq:EPCISQueryDocument xmlns:epcisq="urn:epcglobal:epcis-query:xsd:2" schemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
                            creationDate="2013-06-04T14:59:02.099+02:00">
     <EPCISBody>
-        <QueryResults>
+        <epcisq:QueryResults>
+            <queryName>SimpleEventQuery</queryName>
+            <subscriptionID>32d2aec1-a6d2-46d9-900a-24124288cce1</subscriptionID>
             <resultsBody>
                 <EventList>
                     <TransactionEvent>
@@ -59,6 +61,6 @@
                     </TransactionEvent>
                 </EventList>
             </resultsBody>
-        </QueryResults>
+        </epcisq:QueryResults>
     </EPCISBody>
 </epcisq:EPCISQueryDocument>
